@@ -14,10 +14,12 @@ import javax.swing.JOptionPane;
 public class Task3 {
     public static void main(String args[]){
         String s=" ";
-      s=JOptionPane.showInputDialog("Input String :");
+      s=JOptionPane.showInputDialog(null,"\tREMOVE EXTRA BLANKS\n"+"Input String :");
       String output= ridMultipleBlank(s);
       JOptionPane.showMessageDialog(null,output);
-        
+      s=JOptionPane.showInputDialog(null,"\tREMOVE INTEGERS\n"+"Input String :");
+          output= removeInteger(s);
+      JOptionPane.showMessageDialog(null,output);
       
     }
     //*********************************ridMultipleBlankRemover******************************
@@ -34,13 +36,29 @@ public class Task3 {
            if(s.charAt(i)==' '&& s.charAt(i+1)==' ')
            {
                
-             s = s.replace("  ", "");
+             s = s.replace("  ", " ");
         
            }
             
        }
     return s;
 }
+    public static String removeInteger(String s){
+        for(int i=0;i< s.length();i++){
+        s = s.replace("0", "");
+        s = s.replace("1", "");
+        s = s.replace("2", "");
+        s = s.replace("3", "");
+        s = s.replace("4", "");
+        s = s.replace("5", "");
+        s = s.replace("6", "");
+        s = s.replace("7", "");
+        s = s.replace("8", "");
+        s = s.replace("9", "");
+        
+        }
+        return s;
+    }
 }
 
 
