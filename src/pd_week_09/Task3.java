@@ -6,6 +6,7 @@
 package pd_week_09;
 
 import javax.swing.JOptionPane;
+import java.util.Base64;
 
 /**
  *
@@ -13,13 +14,18 @@ import javax.swing.JOptionPane;
  */
 public class Task3 {
     public static void main(String args[]){
-        String s=" ";
+        String s="";
       s=JOptionPane.showInputDialog(null,"\tREMOVE EXTRA BLANKS\n"+"Input String :");
       String output= ridMultipleBlank(s);
+//      JOptionPane.showMessageDialog(null,output);
+//      s=JOptionPane.showInputDialog(null,"\tREMOVE INTEGERS\n"+"Input String :");
+//          output= removeInteger(s);
+//      JOptionPane.showMessageDialog(null,output);
+     s=JOptionPane.showInputDialog(null,"\tEncryption String\n"+"Input String :");
+          output= stringEncryption(s);
       JOptionPane.showMessageDialog(null,output);
-      s=JOptionPane.showInputDialog(null,"\tREMOVE INTEGERS\n"+"Input String :");
-          output= removeInteger(s);
-      JOptionPane.showMessageDialog(null,output);
+                
+      
       
     }
     //*********************************ridMultipleBlankRemover******************************
@@ -66,8 +72,24 @@ public class Task3 {
         }
         return s;
     }
+        //*********************************Encryption of String******************************
     
+     /**
+     * Encryption of String with key of 10th next character
+     * @param s
+     * @return encryptedString
+     */
+    public static String stringEncryption(String s){
+        int key = 10; //increase every letter with 10th next character in asscii table
+        String encryptedString=""; //returnable String
+        String adder="";//helping string
+        char[] encrypt = s.toCharArray();   //Array to place every single character after encoding
+        for(char encrypted : encrypt ){
+            encrypted += key;
+             adder = Character.toString(encrypted); //converting into String 
+             encryptedString=encryptedString+adder;
+        }
+        return encryptedString;
+    }
 }
-
-
  
