@@ -17,10 +17,10 @@ public class Task3 {
         String s="";
       s=JOptionPane.showInputDialog(null,"\tREMOVE EXTRA BLANKS\n"+"Input String :");
       String output= ridMultipleBlank(s);
-//      JOptionPane.showMessageDialog(null,output);
-//      s=JOptionPane.showInputDialog(null,"\tREMOVE INTEGERS\n"+"Input String :");
-//          output= removeInteger(s);
-//      JOptionPane.showMessageDialog(null,output);
+      JOptionPane.showMessageDialog(null,output);
+      s=JOptionPane.showInputDialog(null,"\tREMOVE INTEGERS From STRING\n"+"Input String :");
+          output= removeInteger(s);
+      JOptionPane.showMessageDialog(null,output);
      s=JOptionPane.showInputDialog(null,"\tEncryption String\n"+"Input String :");
           output= stringEncryption(s);
       JOptionPane.showMessageDialog(null,"Encrypted String is :\n"+output);
