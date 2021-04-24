@@ -6,7 +6,6 @@
 package pd_week_09;
 
 import javax.swing.JOptionPane;
-import jdk.nashorn.internal.scripts.JO;
 
 /**
  *
