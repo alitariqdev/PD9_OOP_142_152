@@ -20,22 +20,32 @@ public class Task2 {
     public static void main(String[] args) {
 
         String input = JOptionPane.showInputDialog("Please Enter a scentence: ");
-        displayVertical(input);
+        String output = displayVertical(input);
 
     }
 
     /**
      *
-     * @param s
+     * @return @param s
      */
-    public static void displayVertical(String s) {
+    public static String displayVertical(String s) {
+        String check = "";
         System.out.println("Your scentence printed vertically is: ");
-
         for (int i = 0; i < s.length(); i++) {
-            
-            System.out.println(s.charAt(i));
-        }
 
+            if ((s.charAt(i) >= 'a' && s.charAt(i) <= 'z')
+                    || (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z')
+                    || s.charAt(i) == '!' || s.charAt(i) == '.'
+                    || s.charAt(i) == '-' || s.charAt(i) == '"' || s.charAt(i) == '?'
+                    || s.charAt(i) == ';' || s.charAt(i) == '\'' || s.charAt(i) == ','
+                    || s.charAt(i) == ':' || s.charAt(i) == '(' || s.charAt(i) == '/'
+                    || s.charAt(i) == ')') {
+                System.out.println(s.charAt(i));
+                check = s;
+            }
+
+        }
+        return check;
     }
 
 }
