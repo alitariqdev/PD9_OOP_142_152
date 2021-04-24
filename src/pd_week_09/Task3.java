@@ -9,13 +9,6 @@ package pd_week_09;
  *
  * @author Ali tariq
  */
-public class PD_Week_09 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class Task3 {
     
 }
