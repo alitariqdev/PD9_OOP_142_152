@@ -23,7 +23,7 @@ public class Task3 {
 //      JOptionPane.showMessageDialog(null,output);
      s=JOptionPane.showInputDialog(null,"\tEncryption String\n"+"Input String :");
           output= stringEncryption(s);
-      JOptionPane.showMessageDialog(null,output);
+      JOptionPane.showMessageDialog(null,"Encrypted String is :\n"+output);
                 
       
       
