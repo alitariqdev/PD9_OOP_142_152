@@ -43,6 +43,13 @@ public class Task3 {
        }
     return s;
 }
+    //*********************************REMOVE INTEGER******************************
+    
+     /**
+     * Remove Integer from the String
+     * @param s
+     * @return s
+     */
     public static String removeInteger(String s){
         for(int i=0;i< s.length();i++){
         s = s.replace("0", "");
@@ -59,6 +66,7 @@ public class Task3 {
         }
         return s;
     }
+    
 }
 
 
