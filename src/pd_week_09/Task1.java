@@ -103,18 +103,26 @@ public class Task1 {
      * @return
      */
     public static boolean findSubString(String s, String sub) {
-
-        char check1;
-        char check2;
         boolean flag = false;
-        for (int i = 0; i < s.length(); i++) {
-            check1 = s.charAt(i);
-            for (int j = 0; i < sub.length(); i++) {
-                check2 = sub.charAt(i);
-                if (check1 == check2) {
-                    flag = true;
-                } else {
-                    flag = false;
+        String check = "";
+        for (int i = 0; i < s.length(); i++) { //loop for searching first letter of SubString in Long String 
+                    
+            if (sub.charAt(0) == s.charAt(i)) {
+                for (int j = 0; j < sub.length(); j++) { //loop for comparing all letters of Sub String after getting First one
+                    if (sub.charAt(j) == s.charAt(i)) {
+                        check = check + s.charAt(i);
+                        i++;
+                    } else {
+                        check = "";
+                        break;
+                    }
+                    //check for same size of SubString with check String
+                    if (check.length() == sub.length()) {
+                        flag = true;
+                        break;
+                    } else {
+                        flag = false;
+                    }
                 }
             }
         }
