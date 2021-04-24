@@ -19,7 +19,7 @@ public class Task3 {
       String output= ridMultipleBlank(s);
       JOptionPane.showMessageDialog(null,output);
 
-      s=JOptionPane.showInputDialog(null,"\tREMOVE INTEGERS From STRING\n"+"Input String :");
+      s=JOptionPane.showInputDialog(null,"\tREMOVE INTEGERS From STRING Connflict\n"+"Input String :");
 
           output= removeInteger(s);
       JOptionPane.showMessageDialog(null,output);
