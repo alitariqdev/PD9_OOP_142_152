@@ -20,7 +20,7 @@ public class Task3 {
       JOptionPane.showMessageDialog(null,output);
 
 
-      s=JOptionPane.showInputDialog(null,"\tREMOVE INTEGERS From STRING Connflict\n"+"Input String :");
+      s=JOptionPane.showInputDialog(null,"\tREMOVE INTEGERS From STRING Conflictts \n"+"Input String :");
 
 
           output= removeInteger(s);
