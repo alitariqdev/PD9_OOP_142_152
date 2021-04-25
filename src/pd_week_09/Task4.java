@@ -61,4 +61,41 @@ public class Task4 {
 
         return count;
     }
+        /**
+     * This function returns the index of searching Char.
+     *
+     * @param s is a string which is passed to the function.
+     * @param c is character that has been searched for index
+     * @return index variable.
+     */
+    public static int getIndexOfLetter(String s, char c) {
+
+        int index = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i)== c) {
+                index=i;
+                break;
+            }
+        }
+
+        return index;
+    }
+            /**
+     * This function returns the Letter of given position.
+     *
+     * @param s is a string which is passed to the function.
+     * @param position is Integer that has been searched for Character
+     * @return letter variable.
+     */
+    public static char getLetterOfPosition(String s, int position) {
+      char letter;
+        letter = '\t';
+        if(position <= s.length()){
+              
+        letter = s.charAt(position);
+       
+      
+       }
+        return letter;
+    }
 }
