@@ -11,7 +11,17 @@ import javax.swing.JOptionPane;
  *
  * @author Hamad DEVIL
  */
-public class Task4 {
+public class MyString {
+
+    private String str = null;
+
+    public MyString(String str) {
+        this.str = str;
+    }
+
+    public String toString() {
+        return str;
+    }
 
     /**
      *
@@ -20,23 +30,22 @@ public class Task4 {
     public static void main(String[] args) {
 
         String input = JOptionPane.showInputDialog("Enter the String");
-
-        JOptionPane.showMessageDialog(null, "Number of Up case Letters: " + noOfUpCaseLetters(input) + "\n"
-                + "Number of Lower case Letters: " + noOfLowerCaseLetters(input) + "\n");
+        MyString ms = new MyString(input);
+        JOptionPane.showMessageDialog(null, "Number of Up case Letters: " + ms.noOfUpCaseLetters() + "\n"
+                + "Number of Lower case Letters: " + ms.noOfLowerCaseLetters() + "\n");
 
     }
 
     /**
      * This function returns the number of all up case letters in the string.
      *
-     * @param s is a string which is passed to the function.
      * @return count variable
      */
-    public static int noOfUpCaseLetters(String s) {
+    public int noOfUpCaseLetters() {
 
         int count = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
+        for (int i = 0; i < this.str.length(); i++) {
+            if (this.str.charAt(i) >= 'A' && this.str.charAt(i) <= 'Z') {
                 count++;
             }
         }
@@ -47,70 +56,69 @@ public class Task4 {
     /**
      * This function returns the number of all lower case letters in the string.
      *
-     * @param s is a string which is passed to the function.
      * @return count variable.
      */
-    public static int noOfLowerCaseLetters(String s) {
+    public int noOfLowerCaseLetters() {
 
         int count = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
+        for (int i = 0; i < this.str.length(); i++) {
+            if (this.str.charAt(i) >= 'a' && this.str.charAt(i) <= 'z') {
                 count++;
             }
         }
 
         return count;
     }
-        /**
+
+    /**
      * This function returns the First index of searching Char.
      *
-     * @param s is a string which is passed to the function.
      * @param c is character that has been searched for index
      * @return index variable.
      */
-    public static int getFirstIndexOfLetter(String s, char c) {
+    public int getFirstIndexOfLetter(char c) {
 
         int index = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i)== c) {
-                index=i;
+        for (int i = 0; i < this.str.length(); i++) {
+            if (this.str.charAt(i) == c) {
+                index = i;
                 break;
             }
         }
 
         return index;
     }
-      /**
+
+    /**
      * This function returns the Letter of given position.
      *
-     * @param s is a string which is passed to the function.
      * @param position is Integer that has been searched for Character
      * @return letter variable.
      */
-    public static char getLetterOfPosition(String s, int position) {
-      char letter;
+    public char getLetterOfPosition(int position) {
+        char letter;
         letter = '\t';
-        if(position <= s.length()){
-              
-        letter = s.charAt(position);
-       
-      
-       }
+        if (position <= this.str.length()) {
+
+            letter = this.str.charAt(position);
+
+        }
         return letter;
     }
-      /**
+
+    /**
      * This function returns the Last index of searching Char.
-     * @param s is a string which is passed to the function.
+     *
      * @param c is character that has been searched for index
      * @return index variable.
      */
-     public static int getLastIndexOfLetter(String s, char c) {
+    public int getLastIndexOfLetter(char c) {
 
         int index = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i)== c) {
-                index=i;
-               
+        for (int i = 0; i < this.str.length(); i++) {
+            if (this.str.charAt(i) == c) {
+                index = i;
+
             }
         }
 
